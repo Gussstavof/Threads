@@ -8,8 +8,8 @@ import java.util.Vector;
 public class ListTask implements Runnable{
 
     //public static List<String> strings = new ArrayList<>();
-    public static List<String> strings = new Vector<>();
-    //public static List<String> strings =  Collections.synchronizedList(new ArrayList<>());
+    //public static List<String> strings = new Vector<>();
+    public static List<String> strings =  Collections.synchronizedList(new ArrayList<>());
 
     private String thread;
 

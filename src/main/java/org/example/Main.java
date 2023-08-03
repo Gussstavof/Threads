@@ -7,7 +7,6 @@ import java.util.Objects;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        /*
         List<Integer> numbers1 = List.of(1000,300000,1000,1000,1000,1000,300000,300000,300000);
 
         List<Integer> numbers = List.of(1,2,3,4);
@@ -19,9 +18,11 @@ public class Main {
         ArithmeticAverageTask.result(numbers);
 
         ArithmeticAverageTask.result(numbers2);
-         */
 
-        for (int i = 0; i <= 1000; i++) {
+        Thread.sleep(2000);
+
+
+        for (int i = 0; i < 1000; i++) {
            new Thread(new ListTask("Thread"+i)).start();
         }
 
