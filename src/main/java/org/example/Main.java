@@ -6,21 +6,14 @@ import java.util.Objects;
 public class Main {
     public static void main(String[] args) {
 
-        List<Integer> numbers1 = List.of(
+        ArithmeticAverageTask.result(List.of(
                 300000, 1000, 1000, 1000,
                 1000, 300000, 300000, 300000
-        );
+        ));
 
-        List<Integer> numbers = List.of(1, 2, 3, 4);
+        ArithmeticAverageTask.result(List.of(5, 5));
 
-        List<Integer> numbers2 = List.of(5, 5);
-
-        ArithmeticAverageTask.result(numbers1);
-
-        ArithmeticAverageTask.result(numbers2);
-
-        ArithmeticAverageTask.result(numbers);
-
+        ArithmeticAverageTask.result(List.of(1, 2, 3, 4));
 
         for (int i = 0; i < 10; i++) {
             new Thread(new ListTask("Thread" + i)).start();
