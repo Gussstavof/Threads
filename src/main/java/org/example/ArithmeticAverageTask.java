@@ -3,12 +3,13 @@ package org.example;
 import java.util.List;
 
 public class ArithmeticAverageTask {
-    public static void result(List<Integer> numbers) {
+    public static synchronized void result(List<Integer> numbers) {
         new Thread(() -> {
-            var total = numbers.stream()
-                    .mapToInt(Integer::intValue)
-                    .sum();
-            System.out.println(total / numbers.size());
+            System.out.println(
+                    numbers.stream()
+                            .mapToInt(Integer::intValue)
+                            .sum() / numbers.size()
+            );
         }, "ArithmeticAverageTask").start();
     }
 }
